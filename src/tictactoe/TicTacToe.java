@@ -8,6 +8,6 @@ public class TicTacToe {
 		Player player = new Player(board);
 		Player player2 = new Player(board);
 		Player.startGame(player, player2);
-
+		board.getArray();
 	}
 }
