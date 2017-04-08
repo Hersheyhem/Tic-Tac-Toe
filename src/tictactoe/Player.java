@@ -1,6 +1,6 @@
 package tictactoe;
 
-import java.util.Scanner;
+
 
 public class Player {
 
@@ -30,17 +30,12 @@ public class Player {
 		this.places = places;
 	}
 
-	public int getRow() {
-		return row;
+	public void setX(int row, int column) {
+		board.grid[row][column] = "X";
 	}
 
-	public int getColumn() {
-		return column;
-	}
-
-	public void setRowAndColumn(int row, int column) {
-		this.row = row;
-		this.column = column;
+	public void setY(int row, int column) {
+		board.grid[row][column] = "Y";
 	}
 
 	public static void startGame(Player player, Player player2) {
@@ -49,12 +44,13 @@ public class Player {
 		player.setPlace(Places.X);
 		int row = input.nextInt();
 		int column = input.nextInt();
+		player.setX(row, column);
 
-		player.setRowAndColumn(row, column);
 		player.setPlace(Places.Y);
 		int row2 = input.nextInt();
 		int column2 = input.nextInt();
-		player2.setRowAndColumn(row2, column2);
+		player2.setY(row2, column2);
 	}
 }
+
 
