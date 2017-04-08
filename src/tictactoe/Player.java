@@ -45,8 +45,8 @@ public class Player {
 		int row = input.nextInt();
 		int column = input.nextInt();
 		player.setX(row, column);
-
-		player.setPlace(Places.Y);
+                System.out.println("choose X or Y");
+		player2.setPlace(Places.Y);
 		int row2 = input.nextInt();
 		int column2 = input.nextInt();
 		player2.setY(row2, column2);
