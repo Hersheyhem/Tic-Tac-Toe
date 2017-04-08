@@ -32,21 +32,19 @@ public class Player {
 
 		while (!board.getHorizontally() && !board.getDiagonally() && !board.getVertically()) {
 			Scanner input = new Scanner(System.in);
-			System.out.println("choose X or Y");
+			
 
 			int row = input.nextInt();
 			int column = input.nextInt();
 			player.setX(row, column);
 			board.checkIfTrue();
-			System.out.println("choose X or Y");
+			
 
 			int row2 = input.nextInt();
 			int column2 = input.nextInt();
 			player2.setY(row2, column2);
 			board.checkIfTrue();
-			System.out.println("D" + board.getDiagonally());
-			System.out.println("V" + board.getVertically());
-			System.out.println("H" + board.getHorizontally());
+		
 			board.getArray();
 		}
 	}
